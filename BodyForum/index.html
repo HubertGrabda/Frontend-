@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BodyForum.com</title>
+    <link rel="stylesheet" href="./CSS/style.min.css">
 </head>
 <body>
-    
+   <header>
+    <div class="title_login">
+        <div class="title">BodyForum.com</div>
+        <div class="login">
+            <img src="user.jpg" alt="Zdjęcie użytkownika">
+            <div class="login_text"><a href="#">Zaloguj się</a></div>
+        </div>
+        <button class="menu_toggle" id="toggle_menu"></button>
+    </div>
+   </header> 
+   <nav class="menu" id="main_menu">
+   
+    <div class="menu_dropdown" id="after_dropdown">
+        <ul class="list">
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Historie</a></li>
+            <li><a href="#">Narzędzia</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+   </nav>
+<script src="./JS/button.js"></script>   
 </body>
 </html>

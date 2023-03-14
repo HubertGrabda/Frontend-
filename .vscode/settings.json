@@ -1,0 +1,6 @@
+{
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.activityBar.visible": true,
+    "workbench.iconTheme": "dobri-theme-icons",
+    "files.autoSave": "onFocusChange"
+}

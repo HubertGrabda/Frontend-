@@ -1,6 +1,7 @@
 :root {
   box-sizing: border-box;
   font-size: calc(1vw + 0.6em);
+  font-family: 'Lato', sans-serif;
 }
 
 *,
@@ -39,6 +40,8 @@ a:hover {
 .title_login .title {
   color: #fff;
   font-size: 2.1em;
+  letter-spacing: 2px;
+  text-shadow: 2px 6px 6px #9f9f9f;
 }
 
 .title_login .login {
@@ -49,15 +52,13 @@ a:hover {
 }
 
 .title_login .menu_toggle {
+  border: none;
   position: absolute;
-  right: 0.5em;
-  top: 0;
+  right: 0.2em;
   overflow: hidden;
   background-color: transparent;
   content: "\2261";
-  height: 2.5em;
-  width: 2.5em;
-  font-size: 1.3em;
+  font-size: 2.5em;
 }
 
 .title_login .menu_toggle::after {
@@ -72,13 +73,7 @@ a:hover {
   display: none;
 }
 
-.menu.open #after_dropdown {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.menu.open #after_dropdown .list {
+.menu .menu_dropdown .nav-menu {
   padding-left: 0;
   border: 1px solid #ccc;
   list-style: none;
@@ -86,19 +81,62 @@ a:hover {
   color: #fff;
 }
 
-.menu.open #after_dropdown li + li {
+.menu li + li {
   border-top: 1px solid #ccc;
 }
 
-.menu.open #after_dropdown li > a {
+.menu li > a {
   display: block;
   padding: 0.8em 1em;
   color: #fff;
   font-weight: normal;
 }
 
+.menu.open .menu_dropdown {
+  display: block;
+}
+
 @media (max-width: 27em) {
   .title_login .login {
     display: none;
+  }
+}
+
+@media (min-width: 27em) {
+  .title_login #toggle_menu {
+    display: none;
+  }
+  #dropdown_menu {
+    display: flex;
+    flex-direction: row;
+  }
+  #dropdown_menu .nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #9f9f9f;
+  }
+  #dropdown_menu .nav-menu li {
+    padding: 0 2em;
+    border: 1px solid #9f9f9f;
+    border-top: 0;
+    position: relative;
+  }
+  #dropdown_menu .nav-menu li:hover > .inner-list {
+    display: block;
+  }
+  #dropdown_menu .nav-menu li a {
+    padding: 0;
+  }
+  #dropdown_menu .nav-menu li .inner-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 2em;
+    z-index: 999;
+  }
+  #dropdown_menu .nav-menu li .inner-list li {
+    display: block;
   }
 }

@@ -1,6 +1,7 @@
 :root {
     box-sizing: border-box;
     font-size: calc(1vw + 0.6em);
+    font-family: 'Lato', sans-serif;
 }
 
 *,
@@ -34,69 +35,116 @@ a:hover{
     .title {
         color: #fff;
         font-size: 2.1em;
+        letter-spacing: 2px;
+        text-shadow: 2px 6px 6px #9f9f9f;
     }
     .login {
         display: flex;
         margin-left: 5px;
         flex-direction: column;
         align-items: center;
+
     }
-    .menu_toggle { 
+    .menu_toggle {
+        border: none; 
         position: absolute;
-        right: 0.5em;
-        top: 0;
+        right: 0.2em;
         overflow: hidden;
         background-color: transparent;
         content: "\2261";
-        height: 2.5em;
-        width: 2.5em;
-        font-size: 1.3em;
+        font-size: 2.5em;
     }
     .menu_toggle::after{
         content: "\2261";
     }
-}
-
-.menu {
-    position: relative;
-    
-    
-    .menu_dropdown { 
-        display: none;
     }
-}
 
-.menu.open {
-    #after_dropdown {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        .list {
-            
-            padding-left: 0;
-            border: 1px solid #ccc;
-            list-style: none;
-            background-color: #000;
-            color: #fff;
-           }
-            li + li {
-            border-top: 1px solid #ccc;
-           }
-            li > a {
+    .menu {
+        position: relative;
+        
+        
+        .menu_dropdown { 
+            display: none;
+
+            .nav-menu {
+                
+                padding-left: 0;
+                border: 1px solid #ccc;
+                list-style: none;
+                background-color: #000;
+                color: #fff;
+
+               }
+               }
+                li + li {
+                border-top: 1px solid #ccc;
+               }
+                li > a {
+                display: block;
+                padding: 0.8em 1em;
+                color: #fff;
+                font-weight: normal;
+                
+               }
+        }
+    
+    
+    .menu.open {
+       .menu_dropdown {
             display: block;
-            padding: 0.8em 1em;
-            color: #fff;
-            font-weight: normal;
             
-           }
+        }
     }
-}
 
 
 @media (max-width: 27em) {
     .title_login {
         .login {
             display: none;
+        }
+    }
+}
+@media (min-width:27em) {
+    .title_login {
+        #toggle_menu {
+            display: none;
+        }
+    }
+    #dropdown_menu {
+        display: flex;
+        flex-direction: row;
+       
+        .nav-menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid #9f9f9f;
+            
+            li {
+                padding: 0 2em;
+                border: 1px solid #9f9f9f;
+                border-top: 0;
+                position: relative;
+                &:hover > .inner-list {
+                    display: block;
+                }
+                a {
+                    padding: 0;
+                                       
+                }
+                .inner-list {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    padding-top: 2em;
+                    z-index: 999;
+
+                    li{
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BodyForum.com</title>
     <link rel="stylesheet" href="./CSS/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
    <header>
@@ -20,11 +23,17 @@
    </header> 
    <nav class="menu" id="main_menu">
    
-    <div class="menu_dropdown" id="after_dropdown">
-        <ul class="list">
+    <div class="menu_dropdown" id="dropdown_menu">
+        <ul class="nav-menu">
             <li><a href="#">Forum</a></li>
-            <li><a href="#">Historie</a></li>
-            <li><a href="#">Narzędzia</a></li>
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">Narzędzia</a>
+                <ul class="inner-list">
+                    <li><a href="#">Kalkulator BMI</a></li>
+                    <li><a href="#">Kalkulator TDEE</a></li>
+                    <li><a href="#">Kalkulator FFMI</a></li>
+                </ul>
+            </li>
             <li><a href="#">Kontakt</a></li>
         </ul>
     </div>

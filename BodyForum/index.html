@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./CSS/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +19,11 @@
             <img src="user.jpg" alt="Zdjęcie użytkownika">
             <div class="login_text"><a href="#">Zaloguj się</a></div>
         </div>
-        <button class="menu_toggle" id="toggle_menu"></button>
+        <button class="menu_toggle" id="toggle_menu">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
     </div>
    </header> 
    <nav class="menu" id="main_menu">
@@ -27,9 +32,9 @@
         <ul class="nav-menu">
             <li><a href="#">Forum</a></li>
             <li><a href="#">Historia</a></li>
-            <li><a href="#">Narzędzia</a>
-                <ul class="inner-list">
-                    <li><a href="#">Kalkulator BMI</a></li>
+            <li id="toggle"><a href="#">Narzędzia</a>
+                <ul class="inner-list" id="inside-list">
+                    <li><a href="https://www.facebook.com/">Kalkulator BMI</a></li>
                     <li><a href="#">Kalkulator TDEE</a></li>
                     <li><a href="#">Kalkulator FFMI</a></li>
                 </ul>

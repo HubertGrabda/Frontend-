@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BodyForum.com</title>
-    <link rel="stylesheet" href="./CSS/style.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
@@ -14,9 +14,9 @@
 <body>
    <header>
     <div class="title_login">
-        <div class="title">BodyForum.com</div>
+        <div class="title"><h1>BodyForum.com</h1></div>
         <div class="login">
-            <img src="user.jpg" alt="Zdjęcie użytkownika">
+            <img src="./IMG/user.jpg" alt="Zdjęcie użytkownika">
             <div class="login_text"><a href="#">Zaloguj się</a></div>
         </div>
         <button class="menu_toggle" id="toggle_menu">
@@ -32,9 +32,11 @@
         <ul class="nav-menu">
             <li><a href="#">Forum</a></li>
             <li><a href="#">Historia</a></li>
-            <li id="toggle"><a href="#">Narzędzia</a>
+            <li id="toggle"><a href="#">Narzędzia <span class="material-symbols-outlined" id="arrow">
+                expand_more
+                </span></a>
                 <ul class="inner-list" id="inside-list">
-                    <li><a href="https://www.facebook.com/">Kalkulator BMI</a></li>
+                    <li><a href="#">Kalkulator BMI</a></li>
                     <li><a href="#">Kalkulator TDEE</a></li>
                     <li><a href="#">Kalkulator FFMI</a></li>
                 </ul>
@@ -43,6 +45,31 @@
         </ul>
     </div>
    </nav>
+   <main>
+        <header>
+            <div class="article-name">
+                <h2>Forum</h2>
+            </div>
+        </header>
+        <article>
+            <div class="article-wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam odio leo, bibendum et sem nec, eleifend molestie nisl. Quisque vel dui sapien. Fusce volutpat tellus vel tortor placerat, a pulvinar nunc luctus. Donec malesuada, lectus feugiat sollicitudin lacinia, nibh tortor mattis turpis, in lacinia lectus elit id leo. Integer viverra neque et commodo fermentum. Etiam vitae orci lectus. Integer vel libero eu orci mattis semper quis in mauris.</p>
+
+                <p>Nam pretium arcu ullamcorper purus finibus ullamcorper. Mauris in dolor ipsum. Praesent quis tincidunt neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ut libero nisl. Maecenas sodales tellus ut lacus tempus, vel luctus lacus consectetur. Aenean tempus lectus tortor, sit amet bibendum felis malesuada vitae. In vel nibh eu purus semper pharetra et sit amet augue.</p>
+
+                <p>Aliquam id ullamcorper sem, in dapibus tellus. Ut sit amet erat posuere eros ultricies placerat laoreet ac nulla. Donec quis urna quis velit tristique lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec a ipsum elementum, pharetra risus eget, auctor sapien. Vestibulum eleifend ornare fringilla. Nulla facilisi. Phasellus a dictum urna, id dapibus nulla. Praesent consectetur sem accumsan tortor tempor, sed blandit lacus laoreet.</p>
+
+                <p>Nullam posuere nisl et justo lobortis, at rutrum erat dictum. Fusce convallis bibendum ornare. Nam ligula augue, scelerisque in dolor non, scelerisque feugiat purus. Phasellus in sem interdum, dapibus lorem id, lacinia erat. Phasellus eget aliquet nibh. Aliquam et urna felis. Pellentesque facilisis dui sit amet nulla varius, ac efficitur ante hendrerit. Sed quis neque in quam placerat tincidunt ut at enim. Aenean posuere at mauris consequat commodo. Morbi aliquam, magna vel condimentum vulputate, orci nibh suscipit nisi, nec interdum urna eros sed lectus. Pellentesque eu consectetur lorem.</p>
+
+                <p>Nulla pretium massa arcu, eu semper orci consectetur eu. Etiam eu odio nec ante commodo accumsan. Curabitur vel aliquet sem. Suspendisse quis consectetur lacus. Nullam bibendum nibh non risus tempor, quis bibendum mi accumsan. Pellentesque mollis felis non neque feugiat scelerisque. In a dolor et neque posuere dictum. Nam condimentum at est a condimentum. Sed rutrum consequat ligula, ut cursus massa pretium ut. Suspendisse ac faucibus lectus, sit amet faucibus magna. Nulla facilisi. Aliquam eleifend ex sed fringilla viverra. Cras in lacus felis. Quisque fringilla justo eu lectus fermentum imperdiet.</p>
+            </div>
+        </article>
+   </main>
+   <footer>
+    <div class="footer">
+       Bodyforum.com - wszystko co muisz wiedzieć o treningu siłowym. <br> All rights reserved - 2023 &copy; 
+    </div>
+   </footer>
 <script src="./JS/button.js"></script>   
 </body>
 </html>

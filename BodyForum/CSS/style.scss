@@ -1,20 +1,22 @@
+@import './variables';
+
 :root {
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    background-color: darkgreen;
-}
+    
 
 body {
     margin: 0;
+    @include bckgrndClr;
+}
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: $txtClr;
 }
 a:hover{
-    text-decoration: underline;
-    color: white;
+    color: $txtClr;
 }
 a:visited {
     color: white;
@@ -24,14 +26,14 @@ a:visited {
 .title_login {
     display: flex;
     justify-content: space-around;
-    align-items:flex-end;
+    align-items:baseline;
     margin-top: 1em;
     .title {
     letter-spacing: 2px;
     text-shadow: 2px 2px 1px #9f9f9f;
     background-color: transparent;
     color: white;
-    font-size: 1.7em;
+    font-size: 1.1em;
     }
     .login {
         display: none;
@@ -41,52 +43,98 @@ a:visited {
         border: 0;
         margin: 0;
         display: flex;
-
     }
 }
 
 .menu {
     
-
     .menu_dropdown {
         display: none;
         .nav-menu {
             margin-top: 1em;
             list-style: none;
             padding:0;
-           li{
+            #toggle {
+                display:block;
+                position: relative;
+                & > a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                & > #inside-list{
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    margin-top: 0.8em;
+                    padding: 0;
+                    z-index: 999;
+                    background-color: red;
+                    width: -webkit-fill-available;
+                    li {
+                        background-color: rebeccapurple;
+                    }
+                    }
+            }
+            
+            }
+            li{
             padding: .7em .4em;
             border: 1px solid white;
             border-radius: 2px;
-            position: relative;
+            display: flex;
+            background-color: $buttonsClr;
             a {
                 display: block;
             }
 
-            .inner-list {
-            display: none;
-            position: absolute;
-            left: 0;
-            margin-top: 0.8em;
-            z-index: 999;
-            padding: 0;
-            background-color: black;
-            width: -webkit-fill-available;
-            }
+            
             
            }
         }
 
     }
-}
+
 
 .menu.open {
    #dropdown_menu {
     display: block;
+    position: absolute;
+    width: 100vw;
    }
   
 }
 
+.article-name {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    color: $txtClr;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+
+}
+
+.article-wrapper {
+    width: 85%;
+    margin: auto;
+    background-color: $navClr;
+    border-radius: 5px;
+    text-align: justify;
+    padding: 0.6em;
+    color: $aTxtClr;
+}
+
+.footer {
+    background-color: transparent;
+    color: $aTxtClr;
+    margin: auto;
+    font-size: .8em;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    bottom: 0.3em;
+}
 
 @media (min-width:27em) {
     .title_login {
@@ -94,27 +142,27 @@ a:visited {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 0.5em;
+            img {
+                width: 2.5em;
+                height: 2.5em;
+            }
         }
     }
     #toggle_menu {
         display: none;
     }
     #dropdown_menu {
-        display: block;
+        display: inline;
         .nav-menu {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+           display: flex;
+           background-color: $buttonsClr;
+           justify-content: space-evenly;
+           max-height: fit-content;
+           align-items: center;
+           li {
             border: 0;
-            background-color: antiquewhite;
-            li {
-                width: 10em;
-                display: flex;
-                justify-content: center;
-                padding: .6em .6em;
-                border: 0;
-                background-color: aqua;
-            }
-        }
+           }
     }
+}
 }

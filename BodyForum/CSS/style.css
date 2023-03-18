@@ -112,6 +112,20 @@ a:visited {
   padding: 1em;
   color: #9f9f9f;
 }
+.article-wrapper .jpg {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  margin: 2em auto;
+}
+.article-wrapper .caption {
+  text-align: center;
+}
+.article-wrapper h3 {
+  text-align: center;
+}
 
 .footer {
   background-color: transparent;

@@ -75,7 +75,7 @@ a:visited {
   width: -webkit-fill-available;
 }
 .menu .menu_dropdown .nav-menu #toggle > #inside-list li {
-  background-color: rebeccapurple;
+  background-color: #663399;
 }
 .menu .menu_dropdown li {
   padding: 0.7em 0.4em;
@@ -119,12 +119,58 @@ a:visited {
   height: 70%;
   overflow: hidden;
   margin: 2em auto;
+  border: 1px solid #000;
 }
 .article-wrapper .caption {
   text-align: center;
 }
 .article-wrapper h3 {
   text-align: center;
+}
+.article-wrapper .input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: stretch;
+}
+.article-wrapper .input-wrap .gender {
+  padding: 1em;
+  display: flex;
+}
+.article-wrapper .input-wrap .gender #men {
+  margin-right: 1em;
+}
+.article-wrapper .input-wrap #weight,
+.article-wrapper .input-wrap #age,
+.article-wrapper .input-wrap #height {
+  gap: 1em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
+}
+.article-wrapper .input-wrap #weight:focus,
+.article-wrapper .input-wrap #height:focus,
+.article-wrapper .input-wrap #age:focus {
+  box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
+}
+.article-wrapper .input-wrap #btn {
+  border: 0;
+  background-color: #00d4ff;
+  padding: 1em;
+  margin: 1em auto;
+  width: 15%;
+  height: 15%;
+  font-size: 0.7em;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.article-wrapper .input-wrap #btn:hover {
+  transform: scale(1.1);
+  background-color: #25babf;
+  opacity: 0.7em;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .footer {
@@ -134,6 +180,9 @@ a:visited {
   font-size: 0.8em;
   width: 80%;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 10%;
 }
 
 @media (min-width: 27em) {

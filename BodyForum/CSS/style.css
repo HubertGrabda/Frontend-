@@ -172,6 +172,9 @@ a:visited {
   cursor: pointer;
   overflow: hidden;
 }
+.article-wrapper .input-wrap #result {
+  margin: auto;
+}
 
 .footer {
   background-color: transparent;

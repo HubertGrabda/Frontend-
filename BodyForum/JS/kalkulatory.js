@@ -1,3 +1,7 @@
+const button = document.querySelector("#btn");
+
+
+
 /* FUNKCJA POTRZEBNA DO TDEE 
 function showg() {
     var ele = document.getElementsByName('genders');
@@ -10,12 +14,12 @@ function showg() {
 }*/
 
 function calcBMI() {
-    var weight = parseInt(document.querySelector("#weight").value);
-    var height = parseInt(document.querySelector("#height").value);
+    var weight = document.querySelector("#weight").value;
+    var height = document.querySelector("#height").value;
     
-   if (weight === '' && height === '') { 
-    document.querySelector("#result").innerHTML = 'Podaj poprawne dane.'
- 
+   if (weight === '' || height === '') { 
+    document.querySelector("#result").innerHTML = 'Podaj poprawne dane.';
+    return;
    }
    else {    
     let bmi = (weight / ((height * height)/ 10000)).toFixed(2);

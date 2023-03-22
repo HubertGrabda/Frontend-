@@ -130,9 +130,9 @@ a:visited {
 .article-wrapper .input-wrap {
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
   flex-direction: column;
-  align-content: space-around;
-  align-items: stretch;
 }
 .article-wrapper .input-wrap .gender {
   padding: 1em;
@@ -141,17 +141,16 @@ a:visited {
 .article-wrapper .input-wrap .gender #men {
   margin-right: 1em;
 }
-.article-wrapper .input-wrap #weight,
-.article-wrapper .input-wrap #age,
-.article-wrapper .input-wrap #height {
+.article-wrapper .input-wrap .input {
+  width: 50%;
+  text-align: center;
   gap: 1em;
+  font-size: 0.7em;
   margin: 1em;
   padding: 1em;
   box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
 }
-.article-wrapper .input-wrap #weight:focus,
-.article-wrapper .input-wrap #height:focus,
-.article-wrapper .input-wrap #age:focus {
+.article-wrapper .input-wrap .input:focus {
   box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
 }
 .article-wrapper .input-wrap #btn {
@@ -159,8 +158,8 @@ a:visited {
   background-color: #00d4ff;
   padding: 1em;
   margin: 1em auto;
-  width: 15%;
-  height: 15%;
+  width: 20%;
+  height: 20%;
   font-size: 0.7em;
   border-radius: 3px;
   transition: transform 0.3s ease-in-out;
@@ -175,17 +174,9 @@ a:visited {
 .article-wrapper .input-wrap #result {
   margin: auto;
 }
-
-.footer {
-  background-color: transparent;
-  color: #9f9f9f;
+.article-wrapper .input-wrap .text {
+  width: 70%;
   margin: auto;
-  font-size: 0.8em;
-  width: 80%;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 10%;
 }
 
 @media (min-width: 27em) {
@@ -216,6 +207,11 @@ a:visited {
   #dropdown_menu .nav-menu li {
     border: 0;
   }
+  #weight,
+  #height,
+  #age {
+    width: 30%;
+  }
 }
 @media (min-width: 67em) {
   :root {
@@ -223,5 +219,10 @@ a:visited {
   }
   .article-wrapper {
     width: 75%;
+  }
+  #weight,
+  #height,
+  #age {
+    width: 25%;
   }
 }/*# sourceMappingURL=style.css.map */

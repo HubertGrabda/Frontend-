@@ -143,9 +143,9 @@ a:visited {
     .input-wrap {
         display: flex;
         flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
         flex-direction: column;
-        align-content: space-around;
-        align-items: stretch;
         .gender {
             padding: 1em;
             display: flex;
@@ -153,17 +153,17 @@ a:visited {
                 margin-right: 1em;
             }
         }
-        #weight,
-        #age,
-        #height {
+        .input {
+            width: 50%;
+            text-align: center;
             gap: 1em;
+            font-size: .7em;
             margin: 1em;
             padding: 1em;
             @include shadow;
         }
-        #weight:focus,
-        #height:focus,        
-        #age:focus {
+                
+        .input:focus {
             @include shadowH;
         }
         #btn {
@@ -171,8 +171,8 @@ a:visited {
             background-color: $buttonsClr;
             padding: 1em;
             margin: 1em auto;
-            width: 15%;
-            height: 15%;
+            width: 20%;
+            height: 20%;
             font-size: .7em;
             border-radius: 3px;
             transition: transform 0.3s ease-in-out;
@@ -187,20 +187,14 @@ a:visited {
         #result {
             margin: auto;
         }
+        .text {
+            width: 70%;
+            margin: auto;
+        }
     }
 }
 
-.footer {
-    background-color: transparent;
-    color: $aTxtClr;
-    margin: auto;
-    font-size: .8em;
-    width: 80%;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 10%;
-   }
+
 
 @media (min-width:27em) {
     .title_login {
@@ -229,8 +223,13 @@ a:visited {
            li {
             border: 0;
            }
+        }   
     }
-}
+    #weight,
+    #height,
+    #age {
+        width: 30%;
+    }
 }
 
 @media (min-width: 67em) {
@@ -239,5 +238,10 @@ a:visited {
     }
     .article-wrapper {
         width: 75%;
+    }
+    #weight,
+    #height,
+    #age {
+        width: 25%;
     }
 }

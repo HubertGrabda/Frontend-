@@ -57,9 +57,15 @@
                <div class="input-wrap">
                     <div class="text"><p>Wskaźnik masy ciała (ang. body mass index, BMI) – współczynnik powstały przez podzielenie masy ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach. Klasyfikacja (zakres wartości) wskaźnika BMI została opracowana wyłącznie dla dorosłych i nie może być stosowana u dzieci.</p>
                     </div>
+                    <form class="gender">
+                        <input type="radio" id="male" name="genders"  class="input" value="male">
+                        <label for="male" id="men">Mężczyzna</label>
+                        <input type="radio" name="genders" id="female" class="input"value="female">
+                        <label for="female">Kobieta</label>
+                    </form>
                     <input type="number" id="weight" class="input" placeholder="Podaj swoją wagę">
                     <input type="number" id="height" class="input" placeholder="Podaj swój wzrost">
-                    <button type="button" id="btn">Oblicz</button>
+                    <button type="button" id="btn" onclick="calcBMI()">Oblicz</button>
                     <div id="result"></div>
                 </div>
                

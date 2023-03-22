@@ -1,21 +1,20 @@
-const button = document.querySelector("#btn");
 
 
 
-/* FUNKCJA POTRZEBNA DO TDEE 
-function showg() {
-    var ele = document.getElementsByName('genders');
-          
-        for(i = 0; i < ele.length; i++) {
-            if(ele[i].checked) {
-                console.log(ele[i].value)
-            }
+
+
+
+/*Kalkulator BMI */
+
+let button = document.querySelector("#btn");
+if(button){
+    button.addEventListener('click', calcBMI ,false);
 }
-}*/
 
 function calcBMI() {
-    var weight = document.querySelector("#weight").value;
-    var height = document.querySelector("#height").value;
+    let weight = document.querySelector("#weight").value;
+    let height = document.querySelector("#height").value;
+
     
    if (weight === '' || height === '') { 
     document.querySelector("#result").innerHTML = 'Podaj poprawne dane.';
@@ -26,4 +25,48 @@ function calcBMI() {
     document.querySelector("#result").innerHTML = "Twoje BMI wynosi:"+''+ bmi;
    }  
 }
+
+
+/*  TDEE */
+
+
+
+function showGender() {
+    var ele = document.getElementsByName('genders');  
+        for(i = 0; i < ele.length; i++) {
+            if(ele[i].checked) {
+                var value = i;
+                calcTDEE(value);
+            }
+        }         
+}
+
+activity = ['1,0','1,2','1,4','1,6','1,8','2','2,2'];
+
+
+function calcTDEE(value) {
+    let weight = document.querySelector("#weight").value;
+    let height = document.querySelector("#height").value;
+    let age = document.querySelector('#age').value;
+    let BMR = '';
+    if (value === 0) {
+        BMR = (66.47 + (13.75*weight) + (5*height) + (6,75*age));
+        console.log(BMR);
+    }
+    else {
+        BMR = (665.09 + (9.56*weight) + (1.85 * height) - (4.67 * age));
+        console.log(BMR);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 

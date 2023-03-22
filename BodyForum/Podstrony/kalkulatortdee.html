@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="../JS/kalkulatory.js"></script>
+    
 </head>
 <body>
    <header>
@@ -63,16 +63,18 @@
                         <input type="radio" name="genders" id="female" class="input"value="female">
                         <label for="female">Kobieta</label>
                     </form>
+                    <input type="number" id="age" class="input" placeholder="Podaj swój wiek">
                     <input type="number" id="weight" class="input" placeholder="Podaj swoją wagę">
                     <input type="number" id="height" class="input" placeholder="Podaj swój wzrost">
-                    <button type="button" id="btn" onclick="calcBMI()">Oblicz</button>
+                    <button type="button" id="btn1" onclick="showGender()">Oblicz</button>
                     <div id="result"></div>
                 </div>
                
             </div>
         </article>
    </main>    
-<script src="../JS/button.js"></script>   
+<script src="../JS/button.js"></script>
+<script src="../JS/kalkulatory.js"></script>   
 
 </body>
 </html>

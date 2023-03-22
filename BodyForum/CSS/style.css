@@ -173,6 +173,7 @@ a:visited {
 }
 .article-wrapper .input-wrap #result {
   margin: auto;
+  text-decoration: underline;
 }
 .article-wrapper .input-wrap .text {
   width: 70%;

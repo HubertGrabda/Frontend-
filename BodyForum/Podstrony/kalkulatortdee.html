@@ -58,26 +58,26 @@
                     <div class="text"><p>Wskaźnik masy ciała (ang. body mass index, BMI) – współczynnik powstały przez podzielenie masy ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach. Klasyfikacja (zakres wartości) wskaźnika BMI została opracowana wyłącznie dla dorosłych i nie może być stosowana u dzieci.</p>
                     </div>
                     <label>Wybierz swój poziom aktywności</label>
-                    <select id="activity">
-                        <option value="option1">Leżący lub siedzący tryb życia, brak aktywności fizycznej</option>
-                        <option value="option2">Praca siedząca, niska aktywność fizyczna</option>
-                        <option value="option3">Praca siedząca, trening 2 razy w tygodniu</option>
-                        <option value="option4">Lekka praca fizyczna, trening 3-4 razy w tygodniu</option>
-                        <option value="option5">Praca fizyczna, trening 5 razy w tygodniu</option>
-                        <option value="option6">Ciężka praca fizyczna, codzienny trening</option>
-                        <option value="option7">Sport wyczynowy</option>
+                    <select id="activity" class="opt-selct">
+                        <option value="option1" class="opt">Leżący lub siedzący tryb życia, brak aktywności fizycznej</option>
+                        <option value="option2" class="opt">Praca siedząca, niska aktywność fizyczna</option>
+                        <option value="option3" class="opt">Praca siedząca, trening 2 razy w tygodniu</option>
+                        <option value="option4" class="opt">Lekka praca fizyczna, trening 3-4 razy w tygodniu</option>
+                        <option value="option5" class="opt">Praca fizyczna, trening 5 razy w tygodniu</option>
+                        <option value="option6" class="opt">Ciężka praca fizyczna, codzienny trening</option>
+                        <option value="option7" class="opt">Sport wyczynowy</option>
                       </select>
                       
                     <form class="gender">
-                        <input type="radio" id="male" name="genders"  class="input" value="male">
+                        <input type="radio" id="male" name="genders" value="male">
                         <label for="male" id="men">Mężczyzna</label>
-                        <input type="radio" name="genders" id="female" class="input"value="female">
+                        <input type="radio" name="genders" id="female" value="female">
                         <label for="female">Kobieta</label>
                     </form>
                     <input type="number" id="age" class="input" placeholder="Podaj swój wiek">
                     <input type="number" id="weight" class="input" placeholder="Podaj swoją wagę">
                     <input type="number" id="height" class="input" placeholder="Podaj swój wzrost">
-                    <button type="button" id="btn1" onclick="TDEE()">Oblicz</button>
+                    <button type="button" id="btn1" class="buttn">Oblicz</button>
                     <div id="result"></div>
                 </div>
                

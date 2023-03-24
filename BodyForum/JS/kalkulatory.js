@@ -6,10 +6,7 @@
 
 /*Kalkulator BMI */
 
-let button = document.querySelector("#btn");
-if(button){
-    button.addEventListener('click', calcBMI ,false);
-}
+
 
 function calcBMI() {
     let weight = document.querySelector("#weight").value;
@@ -28,6 +25,11 @@ function calcBMI() {
 
 
 /*  TDEE */
+
+let button1 = document.querySelector("#btn1");
+if (button1) {
+    button1.addEventListener('click', TDEE, false);
+}
 
 function TDEE() {
     var ele = document.getElementsByName('genders');

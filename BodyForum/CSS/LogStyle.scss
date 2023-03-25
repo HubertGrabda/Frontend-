@@ -1,0 +1,130 @@
+@import './variables';
+
+:root {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+
+body {
+    margin: 0;
+    @include bckgrndClr;
+}
+}
+
+a {
+    text-decoration: none;
+    color: $txtClr;
+}
+a:hover{
+    color: $txtClr;
+    opacity: 80%;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.title_login {
+    display: flex;
+    justify-content: space-around;
+    align-items:baseline;
+    margin-top: 1em;
+    .title {
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 1px #9f9f9f;
+    background-color: transparent;
+    color: white;
+    font-size: 1.1em;
+    }
+
+    
+}
+
+
+.article-name {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    color: $txtClr;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+
+}
+
+.article-wrapper {
+    width: 85%;
+    display: flex;
+    margin: 3em auto;
+    background-color: #f4eef3;
+    border-radius: 5px;
+    padding: 1em;
+    justify-content: center;    
+    color: $aTxtClr;    
+    .input-wrap {
+        display: flex;
+        flex-direction: column;
+        .textbox {
+            width: 100%;
+            position: relative;
+            margin: auto;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                translate: 0 -50%;  
+            } 
+        .input {
+            text-align: center;            
+            margin: 1em;
+            padding: 1em;
+            @include shadow;
+        }
+                
+        .input:focus {
+            @include shadowH;
+        }
+    }
+        .buttn {
+            border: 0;
+            background-color: $buttonsClr;
+            padding: 1em;
+            margin: 1em auto;
+            width: 50%;
+            border-radius: 3px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .buttn:hover {
+            transform: scale(1.1);
+            background-color: $buttonHclr;
+            opacity: 0.7em;
+            cursor: pointer;
+            overflow: hidden;
+        }
+    }
+    #result {
+        font-size: .6em;
+        margin: auto;
+        text-decoration: underline;
+    }
+}
+
+
+
+@media (min-width:27em) {
+    .article-wrapper {
+        width: 40vw;
+    }
+}
+
+
+@media (min-width: 67em) {
+    :root {
+        font-size: 1.5em;
+    }
+    .article-wrapper {
+        width: 20%;
+    }
+    .input {
+        width: 15vw;
+    }
+}

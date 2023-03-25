@@ -1,0 +1,121 @@
+:root {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root body {
+  margin: 0;
+  background: rgb(12, 18, 38);
+  background: linear-gradient(93deg, rgb(12, 18, 38) 4%, rgb(7, 144, 172) 47%, rgb(196, 130, 189) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c1226",endColorstr="#c482bd",GradientType=1);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  opacity: 80%;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.title_login {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 1em;
+}
+.title_login .title {
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 1px #9f9f9f;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1em;
+}
+
+.article-name {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+.article-wrapper {
+  width: 85%;
+  display: flex;
+  margin: 3em auto;
+  background-color: #f4eef3;
+  border-radius: 5px;
+  padding: 1em;
+  justify-content: center;
+  color: #9f9f9f;
+}
+.article-wrapper .input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.article-wrapper .input-wrap .textbox {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.article-wrapper .input-wrap .textbox span {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  translate: 0 -50%;
+}
+.article-wrapper .input-wrap .textbox .input {
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
+}
+.article-wrapper .input-wrap .textbox .input:focus {
+  box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
+}
+.article-wrapper .input-wrap .buttn {
+  border: 0;
+  background-color: #00d4ff;
+  padding: 1em;
+  margin: 1em auto;
+  width: 50%;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.article-wrapper .input-wrap .buttn:hover {
+  transform: scale(1.1);
+  background-color: #25babf;
+  opacity: 0.7em;
+  cursor: pointer;
+  overflow: hidden;
+}
+.article-wrapper #result {
+  font-size: 0.6em;
+  margin: auto;
+  text-decoration: underline;
+}
+
+@media (min-width: 27em) {
+  .article-wrapper {
+    width: 40vw;
+  }
+}
+@media (min-width: 67em) {
+  :root {
+    font-size: 1.5em;
+  }
+  .article-wrapper {
+    width: 20%;
+  }
+  .input {
+    width: 15vw;
+  }
+}/*# sourceMappingURL=LogStyle.css.map */

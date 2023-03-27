@@ -222,7 +222,8 @@ a:visited {
   }
   #weight,
   #height,
-  #age {
+  #age,
+  #bf {
     width: 30%;
   }
   #activity {
@@ -238,7 +239,8 @@ a:visited {
   }
   #weight,
   #height,
-  #age {
+  #age,
+  #bf {
     width: 25%;
   }
 }/*# sourceMappingURL=style.css.map */

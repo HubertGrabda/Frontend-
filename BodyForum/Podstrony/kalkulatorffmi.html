@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyForum.com</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,200" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+   <header>
+    <div class="title_login">
+        <div class="title"><h1><a href="../index.html">BodyForum.com</a></h1></div>
+        <div class="login">
+            <img src="../IMG/user.jpg" alt="Zdjęcie użytkownika">
+            <div class="login_text"><a href="zaloguj.html">Zaloguj się</a></div>
+        </div>
+        <button class="menu_toggle" id="toggle_menu">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+    </div>
+   </header> 
+   <nav class="menu" id="main_menu">
+   
+    <div class="menu_dropdown" id="dropdown_menu">
+        <ul class="nav-menu">
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Historia</a></li>
+            <li id="toggle"><a href="#">Narzędzia <span class="material-symbols-outlined" id="arrow">
+                expand_more
+                </span></a>
+                <ul class="inner-list" id="inside-list">
+                    <li><a href="kalkulatorbmi.html">Kalkulator BMI</a></li>
+                    <li><a href="kalkulatortdee.html">Kalkulator TDEE</a></li>
+                    <li><a href="kalkulatorffmi.html">Kalkulator FFMI</a></li>
+                </ul>
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+   </nav>
+   <main>
+        <header>
+            <div class="article-name">
+                <h2>Kalkulator TDEE</h2>
+            </div>
+        </header>
+        <article>
+            <div class="article-wrapper">
+               <div class="input-wrap">
+                    <div class="text"><p>TDEE oznacza całkowity dzienny wydatek energetyczny, wskaźnik, dzięki któremu dowiesz się, ile kalorii dziennie powinieneś spalić! Całkowity wydatek energetyczny zależy od podstawowego tempa metabolizmu, a także uwzględnia codzienną aktywność i ćwiczenia.</p>
+                    </div>
+                    <input type="number" id="bf" class="input" placeholder="Podaj swój poziom tłuszczu">
+                    <input type="number" id="weight" class="input" placeholder="Podaj swoją wagę">
+                    <input type="number" id="height" class="input" placeholder="Podaj swój wzrost">
+                    <button type="button" id="btn2" class="buttn">Oblicz</button>
+                    <div id="result"></div>
+                </div>
+               
+            </div>
+        </article>
+   </main>    
+<script src="../JS/button.js"></script>
+<script src="../JS/kalkulatory.js"></script>   
+
+</body>
+</html>

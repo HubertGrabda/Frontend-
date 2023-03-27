@@ -1,12 +1,4 @@
-
-
-
-
-
-
 /*Kalkulator BMI */
-
-
 
 function calcBMI() {
     let weight = document.querySelector("#weight").value;
@@ -22,7 +14,6 @@ function calcBMI() {
     document.querySelector("#result").innerHTML = "Twoje BMI wynosi:"+''+ bmi;
    }  
 }
-
 
 /*  TDEE */
 
@@ -87,9 +78,31 @@ function multiply(selectedOption,BMR) {
     }
 }
 
+/* FFMI calcualtor */ 
 
+let button2 = document.querySelector("#btn2");
+if (button2) {
+    button2.addEventListener('click', calcFFMI, false);
+}
 
+function calcFFMI() {
+    let weight = document.querySelector("#weight").value;
+    let height = document.querySelector("#height").value;
+    let bodyfatInput = document.querySelector("#bf").value; 
+    
+    if (weight !== '' || height !== '' || bodyfat !== ''){
+        const bodyfat = weight * (bodyfatInput/100);
+        const ffm = weight * (1 - (bodyfatInput/100));
+        const ffmi = (ffm / Math.pow(height, 2.5)) * 2.20462 / 2.2 + 6.3;
+        console.log(bodyfat, ffm , ffmi);
+        document.querySelector("#result").innerHTML = "Twoja masa beztłuszczowa wynosi:"+''+ (ffm) + " " + 'kg' + '<br/>' + 'Twoja masa tłuszczowa:' + (bodyfat) + 'kg' + '<br/>' + 'Twoje FFMI wynosi:' + ffmi.toFixed(2);
+    }
+    else {
+        document.querySelector("#result").innerHTML = 'Podaj poprawne dane.';
+    }
 
+    
+}
 
 
 

@@ -15,10 +15,12 @@ a {
     text-decoration: none;
     color: $txtClr;
 }
+
 a:hover{
     color: $txtClr;
     opacity: 80%;
 }
+
 a:visited {
     color: white;
     text-decoration: none;
@@ -48,7 +50,6 @@ a:visited {
 }
 
 .menu {
-    
     .menu_dropdown {
         display: none;
         .nav-menu {
@@ -77,7 +78,6 @@ a:visited {
                     }
                     }
             }
-            
             }
             li{
             padding: .7em .4em;
@@ -88,9 +88,6 @@ a:visited {
             a {
                 display: block;
             }
-
-            
-            
            }
         }
 
@@ -240,7 +237,8 @@ a:visited {
     }
     #weight,
     #height,
-    #age {
+    #age,
+    #bf {
         width: 30%;
     }
     #activity {
@@ -257,7 +255,8 @@ a:visited {
     }
     #weight,
     #height,
-    #age {
+    #age,
+    #bf {
         width: 25%;
     }
    

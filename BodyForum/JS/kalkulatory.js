@@ -1,7 +1,7 @@
 /*Kalkulator BMI */
 
 
-document.querySelector("#bttn").addEventListener('click', calcBMI, false);
+document.querySelector("#btn").addEventListener('click', calcBMI, false);
 
 function calcBMI() {
     let weight = document.querySelector("#weight").value;

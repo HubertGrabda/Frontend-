@@ -1,6 +1,20 @@
-const email = document.querySelector("#email");
+const emailInput = document.querySelector("#email");
 const password = document.querySelector("#password");
 const wrong = document.querySelector("#result");
+
+const isEmailValid = (email) => {
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+    return emailRegex.test(email);
+}
+
+const validate = () => {
+    const email = emailInput.value;
+    if (!isEmailValid(email)){
+        alert('Podaj poprawny e-mail!');
+        return false;
+    }
+    return true;
+}
 
 const login = () => {
     if (email.value.trim() !== '' && password.value.trim() !== '') {
@@ -11,24 +25,20 @@ const login = () => {
     }
 }
 
-const hide = () => {
-    const usericon1 = document.querySelector("#emot1");
-    const usericon2 = document.querySelector("#emot2");
-    if (email.value !== ' '){
-     usericon1.remove();
+const emoticon1 = document.querySelector("#emot1");
+const emoticon2 = document.querySelector("#emot2");
+
+email.addEventListener('click', () => {
+    if(emailInput.value === ""){
+        emoticon1.remove();
     }
-    if (password.value !== ' '){
-     usericon2.remove();
+})
+
+password.addEventListener('click', () => {
+    if (password.value === ""){
+        emoticon2.remove();
     }
-    console.log(usericon1, usericon2);
-}
-
-const inputs = document.getElementsByClassName('input')
-
-for (let i=0; i<inputs.length;) {
-    inputs[i].addEventListener('click', hide);
-}
-
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#btn").addEventListener('click', login, false); 

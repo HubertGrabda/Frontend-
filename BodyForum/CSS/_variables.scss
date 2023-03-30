@@ -1,11 +1,12 @@
-$buttonsClr: #00d4ff;
-$txtClr: #fff;
-$navClr: #f4eef3;
-$aTxtClr: #9f9f9f;
+$buttonsColor: #00d4ff;
+$textColor: #fff;
+$navColor: #f4eef3;
+$altTextColor: #9f9f9f;
+$errorColor: #ff0000;
 
-$buttonHclr: #25babf;
+$buttonHoverColor: #25babf;
 
-@mixin bckgrndClr {
+@mixin backgronudColor {
     background: rgb(12,18,38);
     background: -moz-linear-gradient(93deg, rgba(12,18,38,1) 4%, rgba(7,144,172,1) 47%, rgba(196,130,189,1) 100%);
     background: -webkit-linear-gradient(93deg, rgba(12,18,38,1) 4%, rgba(7,144,172,1) 47%, rgba(196,130,189,1) 100%);
@@ -19,7 +20,7 @@ $buttonHclr: #25babf;
 box-shadow: 0px 8px 35px -19px rgba(0, 212, 255, 1);
 }
 
-@mixin shadowH {
+@mixin shadowHover {
     -webkit-box-shadow: inset 4px 8px 35px -19px rgba(37, 186, 191, 1);
 -moz-box-shadow: inset 4px 8px 35px -19px rgba(37, 186, 191, 1);
 box-shadow: inset 4px 8px 35px -19px rgba(37, 186, 191, 1);

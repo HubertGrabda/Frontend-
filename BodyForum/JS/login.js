@@ -17,7 +17,7 @@ const validate = () => {
 }
 
 const login = () => {
-    if (email.value.trim() !== '' && password.value.trim() !== '') {
+    if (validate()  && password.value !== ' '){
         window.location.href = '../Podstrony/index-logged-in.html';
     }
     else {
@@ -28,7 +28,7 @@ const login = () => {
 const emoticon1 = document.querySelector("#emot1");
 const emoticon2 = document.querySelector("#emot2");
 
-email.addEventListener('click', () => {
+emailInput.addEventListener('click', () => {
     if(emailInput.value === ""){
         emoticon1.remove();
     }

@@ -162,6 +162,9 @@ a:visited {
   display: flex;
   align-items: center;
 }
+.article-wrapper .input-wrap .input.showError {
+  border: 2px solid #ff0000;
+}
 .article-wrapper .input-wrap .input:focus {
   box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
 }
@@ -228,6 +231,9 @@ a:visited {
   }
   #activity {
     width: 25vw;
+  }
+  #weight.error {
+    border: 1px solid;
   }
 }
 @media (min-width: 67em) {

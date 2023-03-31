@@ -1,32 +1,54 @@
-import {right_data,weightValue,heightValue,isEmpty,weightInput,heightInput,result,in_result} from "./variables.js";
+const isEmpty = (value) => value === '';
+const in_html = (txt) => "Twoje " + txt + " " + "wynosi: ";
+// class error {
+//     constructor(input,classname,alert) {
+//         this.input_name = "document.querySelector(#" + input + ");";
+//         this.classname = input + ".classList.toggle('showError');";
+//         this.alert = 'alert("Podaj poprawne dane ('+input+');'; 
+//     }
+// }
 
-document.querySelector("#btn").addEventListener('click', () => {
-        // if (isEmpty(weightInput) && isEmpty(heightInput)){
-        //     let inputs = document.querySelectorAll(".input");
-        //     inputs.forEach((input) => {
-        //        input.classList.toggle("showError");
-        //        console.log(input,inputs)
-        //     })
-        //     result.innerHTML = "Podaj poprawne dane."
-        // }  
-        if (isEmpty(weightInput)) {
-            weightInput.classList.toggle('showError');
-            result.innerHTML = right_data; 
-            window.addEventListener('click', () =>{
-                weightInput.classList.remove('showError');
-                result.innerHTML = " ";
-            })
-        }
-        // if (isEmpty(heightInput) === true) {
-        //     document.querySelector("#height").classList.toggle('showError');
-        //     result.innerHTML = right_data;
-        // } 
-        // else {
-        //    let BMI = parseInt(weightValue)/Math.pow(parseInt(heightValue),2);
-        //     console.log(BMI);
-        //    result.innerHTML = in_result("BMI") + BMI; 
-        // } 
-});
+// console.log()
+
+
+const calcBMI = () => {
+    const height = document.querySelector("#height");
+    const weight = document.querySelector("#weight");
+    const height_into_meters = height.value/100;
+    const result = document.querySelector("#result");
+    
+    if(isEmpty(weight.value)) {
+           
+    }
+    
+    if (isEmpty(height.value)) {
+        height.classList.add('ShowError');
+        height.classList.toggle("showError");
+        alert("Podaj poprawny wzrost");
+    }
+    else {
+        let bmi = (weight.value / (height_into_meters * height_into_meters)).toFixed(2);
+        result.innerHTML = in_html("BMI") + bmi;
+    }
+
+};
+
+document.querySelector("#btn").addEventListener('click', calcBMI);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function calcBMI() {
 //     let weight = document.querySelector("#weight").value;

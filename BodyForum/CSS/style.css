@@ -59,6 +59,9 @@ a:visited {
   display: block;
   position: relative;
 }
+.menu .menu_dropdown .nav-menu #toggle #arrow {
+  font-size: 18px;
+}
 .menu .menu_dropdown .nav-menu #toggle > a {
   display: flex;
   justify-content: space-between;
@@ -165,6 +168,22 @@ a:visited {
 .article-wrapper .input-wrap .input.showError {
   border: 2px solid #ff0000;
 }
+.article-wrapper .input-wrap #weight,
+.article-wrapper .input-wrap #height {
+  width: 50%;
+  text-align: center;
+  gap: 1em;
+  font-size: 0.7em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
+  display: flex;
+  align-items: center;
+}
+.article-wrapper .input-wrap #weight.showError,
+.article-wrapper .input-wrap #height.showError {
+  border: 2px solid #ff0000;
+}
 .article-wrapper .input-wrap .input:focus {
   box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
 }
@@ -193,6 +212,10 @@ a:visited {
 .article-wrapper .input-wrap .text {
   width: 70%;
   margin: auto;
+  text-align: center;
+}
+.article-wrapper .input-wrap .text .summary {
+  text-align: justify;
 }
 
 @media (min-width: 27em) {

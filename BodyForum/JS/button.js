@@ -11,22 +11,20 @@ document.querySelector("#toggle_menu").addEventListener('click', hideMenu());
 
 var list_is_visible = false;  
 
-function hideList() {
+const hideList = () => {
     const button = document.querySelector("#toggle");
     const inner_list = document.querySelector(".inner-list");
     const in_html = document.querySelector('#arrow'); 
-    button.addEventListener("click",function() {
+    button.addEventListener("click",() => {
         if (list_is_visible === false) {
             inner_list.style.display = 'block'; 
             list_is_visible =  true;
-            in_html.innerHTML = '<span class="material-symbols-outlined"> expand_less </span>'
-            return list_is_visible
+            in_html.innerHTML = '<span class="material-symbols-outlined" id="arrow"> expand_less </span>';
         }
         else {
             inner_list.style.display = 'none';
             list_is_visible = false;
-            in_html.innerHTML = '<span class="material-symbols-outlined"> expand_more </span>'
-            return list_is_visible;
+            in_html.innerHTML = '<span class="material-symbols-outlined" id="arrow"> expand_more </span>'; 
         }
     })
 }

@@ -61,6 +61,7 @@ a:visited {
 }
 .menu .menu_dropdown .nav-menu #toggle #arrow {
   font-size: 18px;
+  line-height: 15px;
 }
 .menu .menu_dropdown .nav-menu #toggle > a {
   display: flex;
@@ -104,12 +105,13 @@ a:visited {
   color: #fff;
   letter-spacing: 1px;
   font-size: 0.9em;
+  margin: 1em auto;
 }
 
 .article-wrapper {
   width: 85%;
   display: flex;
-  margin: auto;
+  margin: 1.5em auto;
   background-color: #f4eef3;
   border-radius: 5px;
   text-align: justify;
@@ -154,36 +156,6 @@ a:visited {
 .article-wrapper .input-wrap .gender #men {
   margin-right: 1em;
 }
-.article-wrapper .input-wrap .input {
-  width: 50%;
-  text-align: center;
-  gap: 1em;
-  font-size: 0.7em;
-  margin: 1em;
-  padding: 1em;
-  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
-  display: flex;
-  align-items: center;
-}
-.article-wrapper .input-wrap .input.showError {
-  border: 2px solid #ff0000;
-}
-.article-wrapper .input-wrap #weight,
-.article-wrapper .input-wrap #height {
-  width: 50%;
-  text-align: center;
-  gap: 1em;
-  font-size: 0.7em;
-  margin: 1em;
-  padding: 1em;
-  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
-  display: flex;
-  align-items: center;
-}
-.article-wrapper .input-wrap #weight.showError,
-.article-wrapper .input-wrap #height.showError {
-  border: 2px solid #ff0000;
-}
 .article-wrapper .input-wrap .input:focus {
   box-shadow: inset 4px 8px 35px -19px rgb(37, 186, 191);
 }
@@ -217,6 +189,26 @@ a:visited {
 .article-wrapper .input-wrap .text .summary {
   text-align: justify;
 }
+.article-wrapper #weight,
+.article-wrapper #height,
+.article-wrapper #age,
+.article-wrapper #bf {
+  width: 50%;
+  text-align: center;
+  gap: 1em;
+  font-size: 0.7em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0px 8px 35px -19px rgb(0, 212, 255);
+  display: flex;
+  align-items: center;
+}
+.article-wrapper #weight.showError,
+.article-wrapper #height.showError,
+.article-wrapper #age.showError,
+.article-wrapper #bf.showError {
+  border: 2px solid #ff0000;
+}
 
 @media (min-width: 27em) {
   .title_login .login {
@@ -246,16 +238,16 @@ a:visited {
   #dropdown_menu .nav-menu li {
     border: 0;
   }
-  #weight,
-  #height,
-  #age,
-  #bf {
+  .input-wrap #weight,
+  .input-wrap #height,
+  .input-wrap #age,
+  .input-wrap #bf {
     width: 30%;
   }
-  #activity {
+  .input-wrap #activity {
     width: 25vw;
   }
-  #weight.error {
+  .input-wrap #weight.error {
     border: 1px solid;
   }
 }
@@ -266,10 +258,14 @@ a:visited {
   .article-wrapper {
     width: 75%;
   }
-  #weight,
-  #height,
-  #age,
-  #bf {
+  .input-wrap #weight,
+  .input-wrap #height,
+  .input-wrap #age,
+  .input-wrap #bf {
     width: 25%;
+  }
+  .menu .menu_dropdown .nav-menu #toggle #arrow {
+    font-size: 25px;
+    line-height: 27px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-function hideMenu() {
+const hideMenu = () => {
     const button = document.querySelector('.menu_toggle');
     button.addEventListener('click', function(event){
         event.preventDefault();
@@ -7,9 +7,7 @@ function hideMenu() {
     })
 }
 
-document.querySelector("#toggle_menu").addEventListener('click', hideMenu());
-
-var list_is_visible = false;  
+let list_is_visible = false;  
 
 const hideList = () => {
     const button = document.querySelector("#toggle");
@@ -29,4 +27,5 @@ const hideList = () => {
     })
 }
 
+document.querySelector("#toggle_menu").addEventListener('click', hideMenu());
 document.querySelector("#toggle").addEventListener("click",hideList());

@@ -52,31 +52,31 @@ const TDEE = () => {
 
 const multiply = (selectedOption,BMR) => {
     if (selectedOption === "option1") {
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option2") {
         BMR = BMR * 1.2;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option3") {
         BMR = BMR * 1.4;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option4") {
         BMR = BMR * 1.6;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option5") {
         BMR = BMR * 1.8;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option6") {
         BMR = BMR * 2;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
     if (selectedOption === "option7") {
         BMR = BMR * 2.2;
-        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+''+ parseInt(BMR) + " " + 'kcal';
+        result.innerHTML = "Twoje dzienne zapotrzebowanie wynosi:"+' '+ parseInt(BMR) + " " + 'kcal';
     }
 }
 

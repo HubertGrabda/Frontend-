@@ -1,6 +1,9 @@
-const emailInput = document.querySelector("#email");
-const password = document.querySelector("#password");
+const inputWrap = document.querySelector(`.input-wrap`)
+const emailInput = inputWrap.querySelector("#email");
+const password = inputWrap.querySelector("#password");
 const wrong = document.querySelector("#result");
+
+console.log(password);
 
 const isEmailValid = (email) => {
     const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
@@ -17,7 +20,7 @@ const validate = () => {
 }
 
 const login = () => {
-    if (validate()  && password.value !== ' '){
+    if (validate() && !(password.value.trim().length === 0)){
         window.location.href = '../Podstrony/index-logged-in.html';
     }
     else {
@@ -29,17 +32,15 @@ const emoticon1 = document.querySelector("#emot1");
 const emoticon2 = document.querySelector("#emot2");
 
 emailInput.addEventListener('click', () => {
-    if(emailInput.value === ""){
+    if(emailInput.value === " "){
         emoticon1.remove();
     }
 })
 
 password.addEventListener('click', () => {
-    if (password.value === ""){
+    if (password.value === " "){
         emoticon2.remove();
     }
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector("#btn").addEventListener('click', login, false); 
-})
+document.querySelector("#btn").addEventListener('click', login); 

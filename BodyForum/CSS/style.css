@@ -210,6 +210,10 @@ a:visited {
   border: 2px solid #ff0000;
 }
 
+.footer {
+  text-align: center;
+}
+
 @media (min-width: 27em) {
   .title_login .login {
     display: flex;
